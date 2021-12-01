@@ -113,7 +113,7 @@ def lung_seg(img_path, model, back = False, plot = False):
 
     
     if back == True:
-        return resized, out_2[0][0]
+        return cv2.resize(resized, (256,256), interpolation = cv2.INTER_LANCZOS4), cv2.resize(out_2[0][0], (256,256), interpolation = cv2.INTER_LANCZOS4)
 
 
 
